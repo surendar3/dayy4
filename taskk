@@ -1,0 +1,261 @@
+//print odd numbers
+let A=[1,2,3,4,5,6,7];
+var odd=function (A){
+     for(let i=0;i<A.length;i++){
+        if(A[i]%2 != 0){
+            console.log(A[i])
+        }
+     }
+}
+odd(A);
+(function (A){
+    for(let i=0;i<A.length;i++){
+       if(A[i]%2 != 0){
+           console.log(A[i])
+       }
+    }
+})([1,2,3,4,5,6,7])
+//B>>strings to title caps 
+let b=["sure","tare","marry"]
+const tate=[];
+var str=function (b){
+    for(let i=0;i<b.length;i++){
+       
+       tate.push(b[i].toUpperCase())
+    }
+    console.log(tate)
+}
+str(b)
+const mate=[];
+(function(b){
+    for(let i=0;i<b.length;i++){
+       
+        mate.push(b[i].toUpperCase())
+     }
+     console.log(mate)
+})(["sure","tare","marry"])
+//C>>sum of all numbers in an array
+var arr1=[1,2,3,4,5,6,7,8,9];
+let summ=0;
+var sum=function(arr1){
+    for(let i=0;i<arr1.length;i++){
+        summ=summ+arr1[i]
+    }
+    console.log(summ)
+}
+sum(arr1)
+let sam=0;
+(function (arr1){
+    for(let i=0;i<arr1.length;i++){
+        sam=sam+arr1[i]
+    }
+    console.log(sam)
+})([1,2,3,4,5,6,7,8,9])
+//D>>prime numbers
+let arr2=[1,2,3,4,5,6,7,8,9]
+var primee=function(arr2){
+var isprime=function(n){
+    if(n<=1){
+        return false
+    }
+    else if(n==2){
+        return true
+    }
+    else{
+        for(let i=2;i<n;i++){
+            if(n%i==0){
+                return false
+            }
+        }
+    }
+    return true;
+}
+var newar=[]
+for(let j=0;j<arr2.length;j++){
+    if(isprime(arr2[j])){
+        newar.push(arr2[j])
+    }
+}
+console.log(newar);
+}
+primee(arr2);
+
+//
+(function(arr2){
+var isprime=function(n){
+    if(n<=1){
+        return false
+    }
+    else if(n==2){
+        return true
+    }
+    else{
+        for(let i=2;i<n;i++){
+            if(n%i==0){
+                return false
+            }
+        }
+    }
+    return true;
+}
+var newar=[]
+for(let j=0;j<arr2.length;j++){
+    if(isprime(arr2[j])){
+        newar.push(arr2[j])
+    }
+}
+console.log(newar);
+})([1,2,3,4,5,6,7,8,9]);
+//E>>palindrome
+let str="matyam";
+var ispalindrome=function(str){
+    let re=str.length-1;
+    for(let i=0;i<re/2;i++){
+        if(str[i]!=str[re-i]){
+            return false
+        }
+    }return true
+
+} 
+
+console.log(ispalindrome(str)
+);
+
+let strrr=["mam","calm","madam"]
+var po=function(){
+    var ispalindrome=function(str){
+        let re=str.length-1;
+        for(let i=0;i<re/2;i++){
+            if(str[i]!=str[re-i]){
+                return false
+            }
+        }return true
+    
+    } 
+    let on=strrr.filter(ispalindrome);
+    return on
+}
+console.log(po(strrr));
+//F>>median 
+let a1=[1,3,7,22,9,2.5,98]
+let a2=[2,4,6,8,11]
+var med=function(a1,a2){
+    let a3=a1.concat(a2)
+    let bb=a3.sort((a,b)=>a-b)
+    if(bb.length % 2 !=0){
+        let meed=bb[(bb.length)/2-0.5];
+        return meed;
+    }
+    else{
+        let meed=(bb[(bb.length)/2]+bb[(bb.length)/2-1])/2
+        return meed;
+    }
+}
+console.log(med())
+//
+(function(a1,a2){
+    let a3=a1.concat(a2)
+    let bb=a3.sort((a,b)=>a-b)
+    if(bb.length % 2 !=0){
+        let meed=bb[(bb.length)/2-0.5];
+        return meed;
+    }
+    else{
+        let meed=(bb[(bb.length)/2]+bb[(bb.length)/2-1])/2
+        return meed;
+    }
+})([1,2,3,4],[5,8,9,66]);
+//rE>>emove duplicates;
+let arr4=[1,1,22,3,3,4]
+var dup=function(arr4){
+    let ddup=[];
+    for(let i=0;i<arr4.length;i++){
+        
+            if(!ddup.includes(arr4[i])){
+                ddup.push(arr4[i])
+            }
+        
+    }console.log(ddup)
+}
+dup(arr4);
+//
+(function(arr4){
+    let ddup=[];
+    for(let i=0;i<arr4.length;i++){
+        
+            if(!ddup.includes(arr4[i])){
+                ddup.push(arr4[i])
+            }
+        
+    }console.log(ddup)
+})([1,1,22,22,3,4])
+//G>>rotate array 
+let arr5=[1,2,3,4,5];
+let k=1;
+let boruto=[];
+var rot=function(){
+    for(let i=0;i<k;i++){
+        boruto.push(arr5.pop())
+    }console.log(boruto.concat(arr5))
+}
+rot(arr5)
+//iife
+(function(){
+    for(let i=0;i<k;i++){
+        boruto.push(arr5.pop())
+    }console.log(boruto.concat(arr5))
+})([1,2,3,4,5,6])
+
+//2.)arrow function
+//a
+let arr6=[1,2,3,4,5,6]
+var oddd=arr6.filter(i=>i%2!=0)
+console.log(oddd)//?
+//b
+let arr7=["sure","tare","marry"]
+var ca=arr7.map(i=>i.toUpperCase())
+console.log(ca)
+//c
+let arr8=[1,2,3,4,5,6]
+var su=arr8.reduce((sum,i)=>sum+i);
+console.log(su)
+//d
+let arr9=[1,2,3,4,5,6,7,8,9]
+var isprime=(n)=>{
+    if(n<=1){
+        return false
+    }
+    else if(n==2){
+        return true
+    }
+    else{
+        for(let i=2;i<n;i++){
+            if(n%i==0){
+                return false
+            }
+        }
+    }
+    return true;
+}
+
+ const filterPrime = arr9 => {
+    const filtered = arr9.filter(el => isprime(el));
+    return filtered;
+ };
+ console.log(filterPrime(arr9));
+ //palindrome
+ const ispa=(n)=>{
+    let k=n.length-1;
+    for(let i=0;i<k;i++){
+        if(n[i]!==n[k-i]){
+            return false
+        }
+    }return true
+}
+let arr10=["maam","popo"]
+const pall=arr10=>{
+    const ee=arr10.filter(n=>ispa(n))
+    console.log(ee)
+}
+pall(arr10)
+ 
